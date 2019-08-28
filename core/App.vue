@@ -23,8 +23,22 @@ import Vue from 'vue';
 import {mapState, mapActions} from 'vuex';
 import UpdateToast from '@/components/UpdateToast';
 import {keepAlivePages} from '@/.lavas/router';
+import {
+    Vuetify,
+    VApp,
+    VBtn,
+    VIcon
+} from 'vuetify';
 
 const ENABLE_SCROLL_CLASS = 'app-view-scroll-enabled';
+
+Vue.use(Vuetify, {
+    components: {
+        VApp,
+        VBtn,
+        VIcon
+    }
+});
 
 export default {
     name: 'app',

@@ -23,7 +23,21 @@ module.exports = {
             {
                 src: 'package.json'
             }
-        ]
+        ],
+        babel: {
+            plugins: [
+                "transform-runtime",
+                ["transform-imports",
+                    {
+                        "vuetify": {
+                            "transform": "vuetify/es5/components/${member}",
+                            "preventFullImport": true
+                        }
+                    }
+                ]
+            ]
+        },
+        bundleAnalyzerReport: true
     },
     router: {
         mode: 'history',
